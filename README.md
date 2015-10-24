@@ -10,9 +10,11 @@ Java.  Perhaps it will later be ported to C++, but for now, I want to work with 
 a more conceptual level.  This is what I am currently in the process of doing, and code
 is likely to change dramatically as I find better ways to do things and the algorithms
 evolve.  Because of this, don’t be too quick to criticize.  There are going to be some
-messy things.
+messy things.  I try to pay a lot of attention to code-correctness, and the messy things
+are often a result of my finding a “more correct” way of doing something which hasn’t
+been fully implemented.
 
-At this time, I would like to address Torsten Bronger’s wishlist for PP3.
+Now, I would like to address Torsten Bronger’s wishlist for PP3.
 
 “Very faint stars, i.e. stars fainter than ’faintest_star_disk_magnitude’, should be
 removed from the map automatically, if they overlap with a label.  It shouldn’t matter
@@ -29,7 +31,8 @@ and this might allow for generation of planets and such to become much more simp
 
 “More map projections, in particular a real isogonal one.”
 
-Honestly, at the moment, I have no idea what that is.  I’ll deal with it later.
+Honestly, at the moment, I have no idea what that is.  I’ll deal with it later.  Perhaps
+I can write the program so that you can easily add in as many map projections as you want.
 
 “The resolution of the Milky Way should be determined in a way that TeX’s memory doesn’t
 overflow.  Maybe one should switch to contour plots instead of dot patterns for the
@@ -63,16 +66,19 @@ the catalog numbers) be aliases for locations in the sky.  The reason for this i
 are stars like Sirius which are actually systems of multiple stars.  This could simplify the
 process of supplying new catalogs to the program since you would not have to go through and
 check for duplicate listings in other catalogs and whether the other catalogs distinguish
-between the individual stars of a star system, etc.  The stars would be drawn from a separate
-list of stars containing the data of magnitude, color, location, etc.
+between the individual stars of a star system, etc.  The actual stars would be drawn from a
+separate list of stars containing the data of magnitude, color, location, etc.
 
 “Besides that, I’d like to re-structure the internals of PP3 because in some respect the code
 is not well maintainable and expandable.  For the long-term future, it may be worth thinking
 about using Guile as the scripting language.”
 
-Yeah, it definitely was not well-maintainable or expandable.  Re-structuring the internals
-is what I had no choice but to resort to.  About using Guile, I really don’t feel like dealing
-with that right now.
+Okay, not to be mean or anything, but....
+Yeah, it definitely was not well-maintainable or expandable...or readable, for that matter.
+Absolutely nothing was indented in the source code I found.  Good grief.
+I was hoping to avoid re-structuring the internals, but it quickly became apparent that
+there was no other option but to basically rewrite the program.
+About using Guile, I really don’t feel like dealing with that right now.
 
 One of the first things I want to change about the program is its use of PSTricks.  I like
 pdfLaTeX.  Tikz seems to be much more versatile.
