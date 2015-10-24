@@ -33,7 +33,7 @@ public class AzimuthalEquidistantProjection
         COS_C = sin(δ0)*sin(δ) + cos(δ0)*cos(δ)*cos(α - α0);
         C = acos(COS_C);
         K = C / sin(C);
-        xy[0] = K * cos(δ)*sin(α - α0);
+        xy[0] = -1 * K * cos(δ)*sin(α - α0);
         xy[1] = K * ( cos(δ0)*sin(δ) - sin(δ0)*cos(δ)*cos(α - α0) );
         
         return xy;
