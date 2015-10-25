@@ -2,22 +2,17 @@ import static java.lang.Math.sin;
 import static java.lang.Math.cos;
 import static java.lang.Math.acos;
 
-public class AzimuthalEquidistantProjection
+public class AzimuthalEquidistantProjection extends CelestialMapProjection
 {
-    /* Instance Variables */
-    private final double α0;
-    private final double δ0;
-    
     /*== Constructors ==*/
     public AzimuthalEquidistantProjection( final RightAscension CENTER_RA,
                                            final Declination CENTER_DEC )
     {
-        α0 = CENTER_RA.toRadians();
-        δ0 = CENTER_DEC.toRadians();
+        super( CENTER_RA, CENTER_DEC );
     }
     
     /*== Accessors ==*/
-    public double[] getXY( final RightAscension RA, final Declination DEC  )
+    public double[] getXY( final RightAscension RA, final Declination DEC )
     {
         /* Local Constants */
         final double α = RA.toRadians();
