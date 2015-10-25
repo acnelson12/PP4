@@ -9,7 +9,7 @@ public class StarPlot
 		final RightAscension RA = new RightAscension( "17h47m20.4s" );
 		final Declination DEC = new Declination( "-28°23\'07\"" );
 		AzimuthalEquidistantProjection p;
-		Scanner in = new Scanner( new File( "stars2.pp4" ) );
+		Scanner in = new Scanner( new File( "stars.pp4" ) );
 		FileWriter out = new FileWriter( new File( "starplot2.tex" ) );
 		p = new AzimuthalEquidistantProjection( RA, DEC );
 		in.next(); in.next(); in.next(); in.next();
