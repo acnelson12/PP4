@@ -16,7 +16,7 @@ been fully implemented.
 
 Now, I would like to address Torsten Bronger’s wishlist for PP3.
 
-“Very faint stars, i.e. stars fainter than ’faintest_star_disk_magnitude’, should be
+“Very faint stars, i.e. stars fainter than ‘faintest_star_disk_magnitude’, should be
 removed from the map automatically, if they overlap with a label.  It shouldn’t matter
 whether the label was implicitly created or user-defined.”
 
