@@ -1,0 +1,15 @@
+###############################
+## Syntax highlighting for PP4.
+###############################
+syntax "pp4" "\.pp4$"
+## Map size commands
+color brightgreen "\<(right_ascension|declination|height|width|grad_per_cm)\>"
+## PP4 commands
+color green "\<(include|output|switch|set)\>"
+color red "\<(pdf_output|eps_output|milky_way|nebulae|grid|ecliptic|boundaries|colored_stars|constellation|faintest_cluster_magnitude|faintest_diffuse_nebula_magnitude|faintest_star_magnitude|faintest_star_disk_magnitude|minimal_star_radius|standard_radius|background|grid_color|ecliptic_color|boundary_color|highlighted_boundary_color|constellation_line_color|milky_way_color|nebulae_color|h_ii_color|star_color|label_color|text_label_color|grid_style|ecliptic_style|boundary_style|highlighted_boundary_style|nebulae_style|constellation_line_style|grid_width|ecliptic_width|nebulae_width|boundary_width|highlighted_boundary_width|constellation_line_width|shortest_constellation_line|label_skip|minimal_nebula_radius|fontsize)\>"
+color cyan start=";?[[:space:]]*(star|label|cloud)[[:space:]]" end=";"
+color brightcyan "[[:space:]]*(star|label|cloud)\>"
+color white ""[^"]*""
+color yellow "\<(on|off|solid|dashed)\>"
+color blue "#.*$"
+color ,green "[[:space:]]+$"
