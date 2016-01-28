@@ -38,16 +38,12 @@ I can write the program so that you can easily add in as many map projections as
 overflow.  Maybe one should switch to contour plots instead of dot patterns for the
 Milky Way.”
 
-This is my top priority.  My first thought when looking at the structure of PP3 was actually
-“Wouldn’t contour plots be more efficient?”.  However, I am currently thinking that the
-use of contour plots would be short-term gain, but long-term loss.  The reason for this is
-that the real Milky Way is composed of stars, which can be considered points.  It seems
-that to generate a genuine Milky Way, it would be best if one could use the actual stars.
-I am aware that this would require potentially massive amounts of data.  I don’t care.
-At least, that is the attitude with which I am approaching this.  No matter what, the
-program needs to be able to handle massive amounts of data.  The current plan for preventing
-the memory overflow is to break the generated chart into layers which can be compiled
-separately and then merged into the final chart.
+This is my top priority.  Right now, I do not know enough about math and graphics programming
+to develop a contour plot with gradients in vector graphics.  There is a wonderful simplicity
+to generating the Milky Way from a pixel by pixel scan of a picture.  I may choose to leave
+it this way.  Since this is basically generating a raster image, it will probably be best to
+concede that the final map will be a vector image with a raster image background.  Some form
+of interpolation may be worth adding to smooth the resolution.
 
 “Create little bitmaps of all labels in order to determine kerning parameters for them.”
 
