@@ -73,9 +73,7 @@ separate list of stars containing the data of magnitude, color, location, etc.
 is not well maintainable and expandable.  For the long-term future, it may be worth thinking
 about using Guile as the scripting language.”
 
-Okay, not to be mean or anything, but....
-Yeah, it definitely was not well-maintainable or expandable...or readable, for that matter.
-Absolutely nothing was indented in the source code I found.  Good grief.
+Yeah, that is why I am basically rewriting it from scratch.
 I was hoping to avoid re-structuring the internals, but it quickly became apparent that
 there was no other option but to basically rewrite the program.
 About using Guile, I really don’t feel like dealing with that right now.
