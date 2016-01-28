@@ -101,8 +101,8 @@ public class JStarPlot
 		// Fill in the image with black
 		g2.setColor( Color.black );
 		g2.fillRect( 0, 0, WIDTH, HEIGHT );
-		File fmw = new File( "/home/aaron/workspace/PP4/bin/images/GAIAMilkyWay.png" );
-		File fha = new File( "/home/aaron/workspace/PP4/bin/images/HAlpha.png" );
+		File fmw = new File( "GAIAMilkyWay.png" );
+		File fha = new File( "HAlpha.png" );
 
 		try
 		{
@@ -342,7 +342,7 @@ public class JStarPlot
 		im.openNewDisplayWindow();
 
 		AzimuthalEquidistantProjection p;
-		Scanner in = new Scanner( new File( "/home/aaron/workspace/PP4/catalogs/hipparcos-tycho2.pp4" ) );
+		Scanner in = new Scanner( new File( "hipparcos-tycho2.pp4" ) );
 		p = AzimuthalEquidistantProjection.ORION;
 		im.drawMilkyWay( p );
 		im.repaintCurrentDisplayWindow();
