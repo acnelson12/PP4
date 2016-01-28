@@ -2,8 +2,6 @@ import java.awt.Graphics2D;
 import java.io.File;
 import java.util.Scanner;
 
-import coordinates.AzimuthalEquidistantProjection;
-
 public class StarPlotGradient extends JStarPlot
 {
 	public StarPlotGradient()
@@ -47,8 +45,7 @@ public class StarPlotGradient extends JStarPlot
 		im.openNewDisplayWindow();
 
 		AzimuthalEquidistantProjection p;
-		//Scanner in = new Scanner( new File( "/home/aaron/workspace/PP4/catalogs/SGRstars.pp4" ) );
-		Scanner in = new Scanner( new File( "/home/aaron/workspace/PP4/catalogs/hipparcos-tycho2.pp4" ) );
+		Scanner in = new Scanner( new File( "hipparcos-tycho2.pp4" ) );
 		p = AzimuthalEquidistantProjection.TAURUS;
 		im.drawMilkyWay( p );
 		im.repaintCurrentDisplayWindow();
