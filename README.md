@@ -75,7 +75,9 @@ there was no other option but to basically rewrite the program.
 About using Guile, I really don’t feel like dealing with that right now.
 
 One of the first things I want to change about the program is its use of PSTricks.  I like
-pdfLaTeX.  Tikz seems to be much more versatile.
+pdfLaTeX, and in that regard, Tikz seems to be much more versatile.  However, I found that
+SVG files are easier to create, and they seem to be something of a standard for vector
+graphics.
 
 I also want to get rid of the use of different file formats for the stars file, the nebulae
 file, the Milky Way file, etc.  Everything should use one format; for example, the stars file
